@@ -1,8 +1,9 @@
 import express from "express"
-import { addSchool } from "../controllers/schoolCOntrollers.js"
+import { addSchool, listSchools } from "../controllers/schoolControllers.js";
 
 const schoolRouter = express.Router()
 
-schoolRouter.post('/add-school',addSchool)
+schoolRouter.post('/addSchool', addSchool)
+schoolRouter.get('/listSchools', listSchools)
 
 export default schoolRouter;
